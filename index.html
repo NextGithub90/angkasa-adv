@@ -1,0 +1,1270 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AngkasaAdv - Solusi Advertising Profesional</title>
+    <meta
+      name="description"
+      content="Angkasa Advertising melayani pembuatan neon box, huruf timbul LED, neon flex, dan berbagai kebutuhan reklame di Jabodetabek."
+    />
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#030712",
+                card: "#0f172a",
+                neonBlue: "#00f0ff",
+                neonPink: "#ff003c",
+                neonCyan: "#0ff0fc",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Outfit", "sans-serif"],
+            },
+            animation: {
+              glow: "glow 2s ease-in-out infinite alternate",
+              marquee: "marquee 35s linear infinite",
+            },
+            keyframes: {
+              marquee: {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-50%)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body
+    class="bg-brand-dark text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-brand-neonBlue selection:text-black"
+  >
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+      <div
+        class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/5 shadow-lg"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#" class="cursor-pointer relative z-50 inline-block group">
+              <img
+                src="img/logo.jpg"
+                alt="AngkasaAdv Logo"
+                class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          <!-- Desktop Menu -->
+          <div
+            class="hidden md:flex space-x-8 items-center cursor-pointer relative z-50"
+          >
+            <a
+              href="#home"
+              class="text-white hover:text-brand-neonBlue transition-colors duration-200 text-sm font-medium"
+              >Beranda</a
+            >
+            <a
+              href="#services"
+              class="text-gray-300 hover:text-brand-neonBlue transition-colors duration-200 text-sm font-medium"
+              >Layanan</a
+            >
+            <a
+              href="#portfolio"
+              class="text-gray-300 hover:text-brand-neonBlue transition-colors duration-200 text-sm font-medium"
+              >Portofolio</a
+            >
+            <a
+              href="#contact"
+              class="px-5 py-2.5 rounded-full bg-brand-neonBlue/10 text-brand-neonBlue border border-brand-neonBlue/30 hover:bg-brand-neonBlue hover:text-black hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300 text-sm font-semibold flex items-center gap-2 group"
+            >
+              <i
+                class="ri-whatsapp-line text-lg group-hover:scale-110 transition-transform"
+              ></i>
+              Konsultasi
+            </a>
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center relative z-50">
+            <button
+              id="mobile-menu-btn"
+              class="text-white hover:text-brand-neonBlue transition-colors p-2 cursor-pointer"
+            >
+              <i class="ri-menu-4-line text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden"
+    >
+      <!-- Minimal Background Pattern -->
+      <div class="absolute inset-0 z-0">
+        <div
+          class="w-full h-full opacity-[0.02]"
+          style="
+            background-image: radial-gradient(
+              circle at center,
+              #ffffff 1px,
+              transparent 1px
+            );
+            background-size: 40px 40px;
+          "
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8"
+        >
+          <!-- Left Content -->
+          <div class="w-full lg:w-1/2 pt-10 lg:pt-0">
+            <div
+              class="reveal-up inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-300 text-xs font-medium tracking-widest uppercase mb-8"
+            >
+              <span class="w-2 h-2 rounded-full bg-brand-neonBlue"></span>
+              Spesialis Reklame Jabodetabek
+            </div>
+
+            <h1
+              class="reveal-up text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-[1.1] mb-6"
+              style="transition-delay: 100ms"
+            >
+              Solusi Visual Branding <br />
+              <span class="text-brand-neonBlue font-light italic"
+                >Lebih Profesional.</span
+              >
+            </h1>
+
+            <p
+              class="reveal-up text-lg text-slate-400 mb-10 max-w-lg leading-relaxed font-light"
+              style="transition-delay: 200ms"
+            >
+              Tingkatkan citra bisnis Anda dengan media promosi berkualitas
+              tinggi. Berpengalaman, presisi, dan memberikan impresi eksklusif
+              yang memukau.
+            </p>
+
+            <div
+              class="reveal-up flex flex-wrap items-center gap-5"
+              style="transition-delay: 300ms"
+            >
+              <a
+                href="#contact"
+                class="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-brand-neonBlue transition-all duration-300 flex items-center gap-2 group"
+              >
+                Mulai Proyek Anda
+                <i
+                  class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"
+                ></i>
+              </a>
+              <a
+                href="#portfolio"
+                class="px-8 py-4 rounded-full text-white border border-transparent hover:border-white/10 transition-all duration-300 font-medium flex items-center gap-2 group"
+              >
+                Lihat Portfolio
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div
+            class="w-full lg:w-1/2 relative reveal-up"
+            style="transition-delay: 400ms"
+          >
+            <!-- Image Container with clean border -->
+            <div
+              class="relative w-full aspect-[4/3] md:aspect-square lg:aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+            >
+              <div
+                class="absolute inset-0 bg-brand-dark/20 z-10 mix-blend-overlay"
+              ></div>
+              <img
+                src="img/hero.png"
+                alt="Produk Neon Box"
+                class="w-full h-full object-cover"
+              />
+
+              <!-- Floating Badge -->
+              <div
+                class="absolute bottom-8 left-8 z-20 bg-black/60 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center gap-4"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-brand-neonBlue/20 text-brand-neonBlue flex items-center justify-center text-xl"
+                >
+                  <i class="ri-lightbulb-flash-line"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-xs text-slate-400 uppercase tracking-wider mb-1"
+                  >
+                    Kualitas
+                  </p>
+                  <p class="text-white font-bold font-heading">
+                    Premium Materials
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decorative subtle glow -->
+            <div
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-brand-neonBlue/10 rounded-full blur-[100px] -z-10 pointer-events-none"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Features list -->
+        <div
+          class="reveal-up grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-10 border-t border-white/10"
+          style="transition-delay: 400ms"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-neonBlue shadow-[0_0_15px_rgba(0,240,255,0.1)]"
+            >
+              <i class="ri-medal-fill"></i>
+            </div>
+            <span class="text-sm font-medium text-slate-300 cursor-default"
+              >Berpengalaman</span
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-neonBlue shadow-[0_0_15px_rgba(0,240,255,0.1)]"
+            >
+              <i class="ri-shield-star-fill"></i>
+            </div>
+            <span class="text-sm font-medium text-slate-300 cursor-default"
+              >Material Premium</span
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-neonBlue shadow-[0_0_15px_rgba(0,240,255,0.1)]"
+            >
+              <i class="ri-magic-line"></i>
+            </div>
+            <span class="text-sm font-medium text-slate-300 cursor-default"
+              >Pengerjaan Rapi</span
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-brand-neonBlue shadow-[0_0_15px_rgba(0,240,255,0.1)]"
+            >
+              <i class="ri-wallet-3-fill"></i>
+            </div>
+            <span class="text-sm font-medium text-slate-300 cursor-default"
+              >Harga Kompetitif</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted By / Marquee -->
+    <section
+      class="py-10 bg-brand-dark border-y border-white/5 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 mb-6 text-center reveal-up">
+        <p
+          class="text-xs text-slate-500 uppercase tracking-widest font-semibold"
+        >
+          Dipercaya Oleh Mitra Institusi & Perusahaan Terkemuka
+        </p>
+      </div>
+      <div
+        class="relative w-full overflow-hidden flex items-center h-16 opacity-70 hover:opacity-100 transition-opacity"
+      >
+        <div
+          class="animate-marquee flex gap-12 sm:gap-24 items-center shrink-0 w-max min-w-max"
+        >
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+          <h5
+            class="text-3xl font-heading font-black text-white/30 tracking-widest whitespace-nowrap"
+          >
+            MITRA
+          </h5>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layanan Kami (Product Showcase) -->
+    <section id="services" class="py-24 relative bg-[#060B18]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 max-w-3xl mx-auto reveal-up">
+          <h2
+            class="text-brand-neonBlue font-semibold uppercase tracking-wider text-sm mb-3"
+          >
+            Layanan Utama Kami
+          </h2>
+          <h3
+            class="text-4xl lg:text-5xl font-heading font-bold text-white mb-6"
+          >
+            Produk & Solusi Visual Branding
+          </h3>
+          <p class="text-slate-400">
+            Jelajahi berbagai pilihan produk reklame unggulan kami. Didesain
+            dengan presisi dan material skala industri terbaik untuk
+            memaksimalkan kesan premium bisnis Anda tanpa perlu berpindah
+            halaman.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 reveal-up"
+          style="transition-delay: 200ms"
+        >
+          <!-- Card 1: Neon Box -->
+          <div
+            class="group relative rounded-3xl overflow-hidden bg-brand-card border border-white/5 shadow-2xl hover:border-brand-neonBlue/40 transition-colors duration-500 flex flex-col h-full"
+          >
+            <div class="h-56 relative overflow-hidden shrink-0">
+              <img
+                src="img/neon-box-4.jpeg"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                alt="Neon Box Premium"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-brand-card to-transparent border-b border-brand-neonBlue/50 opacity-0 group-hover:opacity-100 transition-opacity w-full"
+              ></div>
+            </div>
+            <div
+              class="p-6 sm:p-8 relative z-10 flex flex-col flex-grow bg-brand-card"
+            >
+              <div
+                class="w-12 h-12 rounded-xl bg-brand-neonBlue/10 text-brand-neonBlue flex items-center justify-center mb-5 border border-brand-neonBlue/20 shadow-[0_0_15px_rgba(0,240,255,0.1)]"
+              >
+                <i class="ri-artboard-2-line text-xl"></i>
+              </div>
+              <h4
+                class="text-2xl font-bold font-heading text-white mb-3 group-hover:text-brand-neonBlue transition-colors"
+              >
+                Neon Box Premium
+              </h4>
+              <p
+                class="text-sm text-slate-400 mb-8 flex-grow leading-relaxed font-light"
+              >
+                Pencahayaan presisi logo perusahaan untuk visibilitas tanpa
+                bayangan (shadow-free) yang prima pada siang dan malam hari.
+              </p>
+
+              <a
+                href="detail-neon-box.html"
+                class="inline-flex items-center gap-2 text-brand-neonBlue font-semibold hover:text-white transition-colors w-max"
+              >
+                <span>Lihat Spesifikasi</span>
+                <i
+                  class="ri-arrow-right-line group-hover:translate-x-2 transition-transform"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Huruf Timbul LED -->
+          <div
+            class="group relative rounded-3xl overflow-hidden bg-brand-card border border-white/5 shadow-2xl hover:border-brand-neonBlue/40 transition-colors duration-500 flex flex-col h-full"
+          >
+            <div class="h-56 relative overflow-hidden shrink-0">
+              <img
+                src="img/huruf-timbul2.png.jpeg"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                alt="Huruf Timbul LED 3D"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-brand-card to-transparent border-b border-brand-neonBlue/50 opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </div>
+            <div
+              class="p-6 sm:p-8 relative z-10 flex flex-col flex-grow bg-brand-card"
+            >
+              <div
+                class="w-12 h-12 rounded-xl bg-white/5 text-white group-hover:bg-brand-neonBlue/10 group-hover:text-brand-neonBlue flex items-center justify-center mb-5 border border-transparent group-hover:border-brand-neonBlue/20 transition-all"
+              >
+                <i class="ri-t-box-line text-xl"></i>
+              </div>
+              <h4
+                class="text-2xl font-bold font-heading text-white mb-3 group-hover:text-brand-neonBlue transition-colors"
+              >
+                Huruf Timbul LED 3D
+              </h4>
+              <p
+                class="text-sm text-slate-400 mb-8 flex-grow leading-relaxed font-light"
+              >
+                Corporate identity eksklusif yang memancarkan pesona mapan.
+                Terbuat dari plat Galvanis/Stainless presisi.
+              </p>
+
+              <a
+                href="detail-huruf-timbul.html"
+                class="inline-flex items-center gap-2 text-brand-neonBlue font-semibold hover:text-white transition-colors w-max"
+              >
+                <span>Lihat Spesifikasi</span>
+                <i
+                  class="ri-arrow-right-line group-hover:translate-x-2 transition-transform"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Neon Flex Art -->
+          <div
+            class="group relative rounded-3xl overflow-hidden bg-brand-card border border-white/5 shadow-2xl hover:border-brand-neonPink/40 transition-colors duration-500 flex flex-col h-full"
+          >
+            <div class="h-56 relative overflow-hidden shrink-0">
+              <img
+                src="img/portfolio-neon-flex.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                alt="Neon Flex Art"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-brand-card to-transparent border-b border-brand-neonPink/50 opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </div>
+            <div
+              class="p-6 sm:p-8 relative z-10 flex flex-col flex-grow bg-brand-card"
+            >
+              <div
+                class="w-12 h-12 rounded-xl bg-white/5 text-white group-hover:bg-brand-neonPink/10 group-hover:text-brand-neonPink flex items-center justify-center mb-5 border border-transparent group-hover:border-brand-neonPink/20 transition-all"
+              >
+                <i class="ri-magic-line text-xl"></i>
+              </div>
+              <h4
+                class="text-2xl font-bold font-heading text-white mb-3 group-hover:text-brand-neonPink transition-colors"
+              >
+                Custom Neon Flex Art
+              </h4>
+              <p
+                class="text-sm text-slate-400 mb-8 flex-grow leading-relaxed font-light"
+              >
+                Alternatif neon lentur dengan warna vibran untuk dekor interior
+                maupun estetika venue bisnis modern era baru.
+              </p>
+
+              <a
+                href="detail-neon-flex.html"
+                class="inline-flex items-center gap-2 text-brand-neonPink font-semibold hover:text-white transition-colors w-max"
+              >
+                <span>Lihat Spesifikasi</span>
+                <i
+                  class="ri-arrow-right-line group-hover:translate-x-2 transition-transform"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Signboard -->
+          <div
+            class="group relative rounded-3xl overflow-hidden bg-brand-card border border-white/5 shadow-2xl hover:border-slate-300/40 transition-colors duration-500 flex flex-col h-full"
+          >
+            <div class="h-56 relative overflow-hidden shrink-0">
+              <img
+                src="img/portfolio-signboard.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                alt="Signboard"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-brand-card to-transparent border-b border-white/20 opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+            </div>
+            <div
+              class="p-6 sm:p-8 relative z-10 flex flex-col flex-grow bg-brand-card"
+            >
+              <div
+                class="w-12 h-12 rounded-xl bg-white/5 text-white group-hover:bg-slate-300/10 group-hover:text-white flex items-center justify-center mb-5 border border-transparent transition-all"
+              >
+                <i class="ri-tv-2-line text-xl"></i>
+              </div>
+              <h4
+                class="text-2xl font-bold font-heading text-white mb-3 group-hover:text-slate-200 transition-colors"
+              >
+                Signboard & Papan Plang
+              </h4>
+              <p
+                class="text-sm text-slate-400 mb-8 flex-grow leading-relaxed font-light"
+              >
+                Media utama identitas Anda kokoh kuat ditiup angin. Dirancang
+                khusus dari baja dan plat coating outdoor ekstrem.
+              </p>
+
+              <a
+                href="detail-signboard.html"
+                class="inline-flex items-center gap-2 text-white font-semibold hover:text-brand-neonBlue transition-colors w-max"
+              >
+                <span>Lihat Spesifikasi</span>
+                <i
+                  class="ri-arrow-right-line group-hover:translate-x-2 transition-transform"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: Full Branding Fasad -->
+          <div
+            class="group relative rounded-3xl overflow-hidden bg-brand-card border border-white/5 shadow-2xl hover:border-brand-neonBlue/40 md:col-span-2 lg:col-span-2 transition-colors duration-500 flex flex-col h-full"
+          >
+            <!-- Custom background setup -->
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-brand-card via-[#0A1128] to-[#0d1430] z-0"
+            ></div>
+
+            <div class="flex flex-col md:flex-row h-full relative z-10">
+              <div
+                class="h-56 md:h-auto w-full md:w-1/2 lg:w-2/5 relative overflow-hidden shrink-0"
+              >
+                <img
+                  src="img/portfolio-branding-ruko.png"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  alt="Branding Fasad Ruko"
+                />
+                <div
+                  class="hidden md:block absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0A1128] opacity-100"
+                ></div>
+                <div
+                  class="md:hidden absolute inset-0 bg-gradient-to-b from-transparent to-[#0A1128] opacity-100"
+                ></div>
+              </div>
+              <div
+                class="p-6 sm:p-10 flex flex-col flex-grow justify-center relative"
+              >
+                <div
+                  class="w-12 h-12 rounded-xl bg-brand-neonBlue/10 text-brand-neonBlue flex items-center justify-center mb-5 border border-brand-neonBlue/20 shadow-[0_0_15px_rgba(0,240,255,0.1)]"
+                >
+                  <i class="ri-building-4-line text-xl"></i>
+                </div>
+                <h4
+                  class="text-3xl font-bold font-heading text-white mb-3 group-hover:text-brand-neonBlue transition-colors"
+                >
+                  Full Branding Fasad Gedung
+                </h4>
+                <p
+                  class="text-sm text-slate-400 mb-8 max-w-lg leading-relaxed font-light"
+                >
+                  Solusi <i>end-to-end</i> yang merombak paras arsitektural
+                  properti skala besar Anda. Meliputi pemasangan panel komposit
+                  (ACP), custom canopies, hingga pengerjaan ornamen
+                  architectural lighting monumental.
+                </p>
+
+                <a
+                  href="detail-branding-fasad.html"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-neonBlue text-black font-bold hover:bg-white transition-all w-max hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]"
+                >
+                  <span>Lihat Spesifikasi Eksklusif</span>
+                  <i
+                    class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section
+      id="portfolio"
+      class="py-24 relative bg-brand-dark overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-up"
+        >
+          <div class="max-w-2xl">
+            <h2
+              class="text-brand-neonBlue font-semibold uppercase tracking-wider text-sm mb-3"
+            >
+              Galeri
+            </h2>
+            <h3 class="text-4xl font-heading font-bold text-white">
+              Project Terbaru Kami
+            </h3>
+          </div>
+        </div>
+
+        <!-- Custom grid for portfolio -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          id="portfolio-grid"
+        >
+          <!-- Item 1 - Huruf Timbul Kantor -->
+          <div
+            class="reveal-up portfolio-item rounded-2xl overflow-hidden group cursor-pointer relative"
+            data-category="kantor"
+          >
+            <div class="aspect-[4/3] bg-brand-card overflow-hidden relative">
+              <img
+                src="img/portfolio-huruf-timbul.png"
+                alt="Huruf Timbul Kantor"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6"
+              >
+                <span
+                  class="px-3 py-1 bg-brand-neonBlue/20 border border-brand-neonBlue/30 rounded-full text-xs text-brand-neonBlue mb-3 inline-block w-max"
+                  >Kantor</span
+                >
+                <h4
+                  class="text-xl font-heading font-bold text-white mb-1 group-hover:text-brand-neonBlue transition-colors"
+                >
+                  Huruf Timbul LED "ANGKASA"
+                </h4>
+                <p class="text-slate-300 text-sm mb-4">
+                  Industrial finish, Backlit LED
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 - Neon Box Cafe -->
+          <div
+            class="reveal-up portfolio-item rounded-2xl overflow-hidden group cursor-pointer relative"
+            data-category="cafe"
+            style="transition-delay: 100ms"
+          >
+            <div class="aspect-[4/3] bg-brand-card overflow-hidden relative">
+              <img
+                src="img/portfolio-neon-box.png"
+                alt="Neon Box Cafe"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6"
+              >
+                <span
+                  class="px-3 py-1 bg-brand-neonPink/20 border border-brand-neonPink/30 rounded-full text-xs text-brand-neonPink mb-3 inline-block w-max"
+                  >Café/Resto</span
+                >
+                <h4
+                  class="text-xl font-heading font-bold text-white mb-1 group-hover:text-brand-neonPink transition-colors"
+                >
+                  Neon Box "Warung Kita"
+                </h4>
+                <p class="text-slate-300 text-sm mb-4">
+                  Warm neon glow, Acrylic panel
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 - Branding Ruko Before/After -->
+          <div
+            class="reveal-up portfolio-item rounded-2xl overflow-hidden group cursor-pointer relative lg:row-span-2"
+            data-category="ruko"
+            style="transition-delay: 200ms"
+          >
+            <div
+              class="h-full min-h-[400px] bg-brand-card overflow-hidden relative"
+            >
+              <img
+                src="img/portfolio-branding-ruko.png"
+                alt="Branding Ruko"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-8 w-full">
+                <span
+                  class="px-3 py-1 bg-brand-neonBlue/20 border border-brand-neonBlue/30 rounded-full text-xs text-brand-neonBlue mb-4 inline-block font-semibold"
+                  >Transformasi Total</span
+                >
+                <h4
+                  class="text-2xl font-heading font-bold text-white mb-2 group-hover:text-brand-neonBlue transition-colors"
+                >
+                  Fasad Gadget Jaya
+                </h4>
+                <p class="text-slate-300 text-sm mb-4">
+                  Before-After perombakan total fasad ruko dengan kombinasi neon
+                  panel dan arsitektural lighting.
+                </p>
+                <div
+                  class="flex items-center gap-2 text-xs font-semibold text-brand-neonBlue opacity-0 group-hover:opacity-100 transition-opacity mt-4"
+                >
+                  <i class="ri-zoom-in-line text-lg"></i> Klik untuk memperbesar
+                  visual
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 - Signboard Office -->
+          <div
+            class="reveal-up portfolio-item rounded-2xl overflow-hidden group cursor-pointer relative"
+            data-category="kantor"
+            style="transition-delay: 300ms"
+          >
+            <div class="aspect-[4/3] bg-brand-card overflow-hidden relative">
+              <img
+                src="img/portfolio-signboard.png"
+                alt="Signboard Office"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6"
+              >
+                <span
+                  class="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-xs text-white mb-3 inline-block w-max backdrop-blur-md"
+                  >Kantor</span
+                >
+                <h4
+                  class="text-xl font-heading font-bold text-white mb-1 group-hover:text-brand-neonBlue transition-colors"
+                >
+                  Corporate Sign "PT Teknologi"
+                </h4>
+                <p class="text-slate-300 text-sm mb-4">
+                  Minimalist white LED, Solid concrete wall
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 - Neon Flex Art -->
+          <div
+            class="reveal-up portfolio-item rounded-2xl overflow-hidden group cursor-pointer relative"
+            data-category="cafe"
+            style="transition-delay: 400ms"
+          >
+            <div class="aspect-[4/3] bg-brand-card overflow-hidden relative">
+              <img
+                src="img/portfolio-neon-flex.png"
+                alt="Neon Flex Art"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6"
+              >
+                <span
+                  class="px-3 py-1 bg-brand-neonPink/20 border border-brand-neonPink/30 rounded-full text-xs text-brand-neonPink mb-3 inline-block w-max"
+                  >Ruko / Venue</span
+                >
+                <h4
+                  class="text-xl font-heading font-bold text-white mb-1 group-hover:text-brand-neonPink transition-colors"
+                >
+                  Neon Flex Art "Galeri Seni"
+                </h4>
+                <p class="text-slate-300 text-sm mb-4">
+                  Artistic signage with vivid pink & cyan
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-16 reveal-up">
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors cursor-pointer text-sm font-medium"
+          >
+            Punya ide desain sendiri? Diskusikan dengan tim spesialis kami
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-24 bg-brand-dark/50 relative border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 max-w-3xl mx-auto reveal-up">
+          <h2
+            class="text-brand-neonPink font-semibold uppercase tracking-wider text-sm mb-3"
+          >
+            Testimonial Klien
+          </h2>
+          <h3 class="text-4xl font-heading font-bold text-white mb-6">
+            Cerita Sukses Bersama Kami
+          </h3>
+        </div>
+        <div
+          class="mx-auto max-w-sm md:max-w-4xl lg:px-6 reveal-up"
+          id="animated-testimonial-section"
+        >
+          <div
+            class="relative grid grid-cols-1 gap-y-6 md:gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20 pt-8 md:pt-0"
+          >
+            <!-- Image Stack Section -->
+            <div class="flex items-center justify-center">
+              <div
+                class="relative h-[240px] w-full max-w-[240px] sm:h-72 sm:max-w-xs md:h-80 mx-auto"
+                style="perspective: 1000px"
+                id="testi-image-stack"
+              >
+                <!-- JS inserts images here -->
+              </div>
+            </div>
+
+            <!-- Text and Controls Section -->
+            <div class="flex flex-col justify-center py-4">
+              <div
+                id="testi-text-container"
+                class="flex flex-col justify-center text-center md:text-left transition-all duration-300"
+              >
+                <h3
+                  id="testi-name"
+                  class="text-2xl md:text-3xl font-bold text-white"
+                ></h3>
+                <p
+                  id="testi-designation"
+                  class="text-sm font-semibold text-brand-neonBlue mt-1 uppercase tracking-wide"
+                ></p>
+                <p
+                  id="testi-quote"
+                  class="mt-6 md:mt-8 text-base md:text-lg font-light text-slate-300 leading-relaxed italic"
+                ></p>
+              </div>
+              <div
+                class="flex gap-4 pt-8 md:pt-12 items-center justify-center md:justify-start"
+              >
+                <button
+                  id="testi-prev-btn"
+                  aria-label="Previous testimonial"
+                  class="group flex h-12 w-12 items-center justify-center rounded-full bg-slate-800 transition-colors hover:bg-white focus:outline-none hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]"
+                >
+                  <i
+                    class="ri-arrow-left-line text-xl transition-transform duration-300 group-hover:-translate-x-1 text-slate-300 group-hover:text-black pointer-events-none"
+                  ></i>
+                </button>
+                <button
+                  id="testi-next-btn"
+                  aria-label="Next testimonial"
+                  class="group flex h-12 w-12 items-center justify-center rounded-full bg-slate-800 transition-colors hover:bg-brand-neonBlue focus:outline-none hover:shadow-[0_0_15px_rgba(0,240,255,0.4)]"
+                >
+                  <i
+                    class="ri-arrow-right-line text-xl transition-transform duration-300 group-hover:translate-x-1 text-slate-300 group-hover:text-black pointer-events-none"
+                  ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proses Pengerjaan (Workflow) -->
+    <section class="py-24 bg-[#060B18] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 max-w-3xl mx-auto reveal-up">
+          <h2
+            class="text-brand-neonBlue font-semibold uppercase tracking-wider text-sm mb-3"
+          >
+            Tahapan Pengerjaan
+          </h2>
+          <h3 class="text-4xl font-heading font-bold text-white mb-6">
+            Standard Operasional Tersistem
+          </h3>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal-up"
+          style="transition-delay: 100ms"
+        >
+          <div class="relative flex flex-col items-center text-center group">
+            <div
+              class="w-20 h-20 rounded-2xl bg-brand-card border border-white/10 flex items-center justify-center text-brand-neonBlue text-3xl mb-6 shadow-[0_0_20px_rgba(0,240,255,0.1)] group-hover:bg-brand-neonBlue group-hover:text-black transition-colors relative z-10"
+            >
+              <i class="ri-discuss-line"></i>
+            </div>
+            <div
+              class="hidden lg:block absolute top-10 left-[60%] w-full h-[2px] bg-gradient-to-r from-brand-neonBlue/30 to-transparent border-t border-dashed border-brand-neonBlue/50 z-0"
+            ></div>
+            <h4 class="text-lg font-bold text-white mb-2">1. Konsultasi</h4>
+            <p class="text-sm text-slate-400">
+              Analisa kebutuhan, survei lokasi teknis, & perumusan solusi
+              visual.
+            </p>
+          </div>
+          <div class="relative flex flex-col items-center text-center group">
+            <div
+              class="w-20 h-20 rounded-2xl bg-brand-card border border-white/10 flex items-center justify-center text-brand-neonBlue text-3xl mb-6 shadow-[0_0_20px_rgba(0,240,255,0.1)] group-hover:bg-brand-neonBlue group-hover:text-black transition-colors relative z-10"
+            >
+              <i class="ri-ruler-2-line"></i>
+            </div>
+            <div
+              class="hidden lg:block absolute top-10 left-[60%] w-full h-[2px] bg-gradient-to-r from-brand-neonBlue/30 to-transparent border-t border-dashed border-brand-neonBlue/50 z-0"
+            ></div>
+            <h4 class="text-lg font-bold text-white mb-2">2. Desain 3D</h4>
+            <p class="text-sm text-slate-400">
+              Visualisasi virtual (mockup) agar 100% presisi dan sesuai
+              ekspektasi.
+            </p>
+          </div>
+          <div class="relative flex flex-col items-center text-center group">
+            <div
+              class="w-20 h-20 rounded-2xl bg-brand-card border border-white/10 flex items-center justify-center text-brand-neonBlue text-3xl mb-6 shadow-[0_0_20px_rgba(0,240,255,0.1)] group-hover:bg-brand-neonBlue group-hover:text-black transition-colors relative z-10"
+            >
+              <i class="ri-tools-line"></i>
+            </div>
+            <div
+              class="hidden lg:block absolute top-10 left-[60%] w-full h-[2px] bg-gradient-to-r from-brand-neonBlue/30 to-transparent border-t border-dashed border-brand-neonBlue/50 z-0"
+            ></div>
+            <h4 class="text-lg font-bold text-white mb-2">3. Fabrikasi</h4>
+            <p class="text-sm text-slate-400">
+              Pengerjaan tepat waktu menggunakan mesin presisi laser di
+              workshop.
+            </p>
+          </div>
+          <div class="relative flex flex-col items-center text-center group">
+            <div
+              class="w-20 h-20 rounded-2xl bg-brand-card border border-white/10 flex items-center justify-center text-brand-neonBlue text-3xl mb-6 shadow-[0_0_20px_rgba(0,240,255,0.1)] group-hover:bg-brand-neonBlue group-hover:text-black transition-colors relative z-10"
+            >
+              <i class="ri-shield-check-line"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2">4. Pemasangan</h4>
+            <p class="text-sm text-slate-400">
+              Instalasi akhir kokoh profesional yang dilindungi oleh garansi
+              teknis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action & Contact -->
+    <section id="contact" class="py-24 relative bg-brand-dark">
+      <div class="absolute inset-0 z-0">
+        <!-- Grid pattern -->
+        <div
+          class="w-full h-full opacity-[0.03]"
+          style="
+            background-image: radial-gradient(
+              circle at center,
+              #ffffff 1px,
+              transparent 1px
+            );
+            background-size: 32px 32px;
+          "
+        ></div>
+        <div
+          class="absolute right-0 bottom-0 w-[500px] h-[500px] bg-brand-neonBlue/10 rounded-full blur-[100px] pointer-events-none"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          class="bg-brand-card rounded-3xl border border-white/5 overflow-hidden flex flex-col lg:flex-row reveal-up"
+        >
+          <!-- Left info -->
+          <div
+            class="lg:w-5/12 p-10 md:p-16 flex flex-col justify-between relative bg-gradient-to-br from-brand-card to-[#0A1021]"
+          >
+            <div
+              class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-brand-neonBlue to-blue-600"
+            ></div>
+            <div>
+              <h3 class="text-3xl font-heading font-bold text-white mb-4">
+                Siap Membuat Bisnis Anda Lebih Terlihat?
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                Konsultasikan kebutuhan advertising Anda secara gratis. Kami
+                siap memberikan solusi desain, material, hingga penawaran harga
+                terbaik untuk area Jabodetabek.
+              </p>
+
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 text-brand-neonBlue mt-1"
+                  >
+                    <i class="ri-map-pin-line text-lg"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-white font-medium mb-1">
+                      Area Layanan Utama
+                    </h5>
+                    <p class="text-slate-500 text-sm">
+                      Jakarta, Bogor, Depok, Tangerang, Bekasi dan wilayah
+                      sekitarnya.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-full bg-brand-neonBlue/10 flex items-center justify-center shrink-0 text-brand-neonBlue mt-1 ring-1 ring-brand-neonBlue/30"
+                  >
+                    <i class="ri-whatsapp-line text-lg"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-white font-medium mb-1">
+                      Fast Response WhatsApp
+                    </h5>
+                    <a
+                      href="https://wa.me/62895375867162"
+                      target="_blank"
+                      class="text-brand-neonBlue hover:text-white transition-colors font-mono"
+                      >+62 895-3758-67162</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 text-brand-neonBlue mt-1"
+                  >
+                    <i class="ri-mail-line text-lg"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-white font-medium mb-1">Email Inquiry</h5>
+                    <a
+                      href="mailto:hello@angkasaadv.com"
+                      class="text-slate-400 hover:text-white transition-colors text-sm"
+                      >hello@angkasaadv.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Action -->
+          <div
+            class="lg:w-7/12 p-10 md:p-16 border-t lg:border-t-0 lg:border-l border-white/5 flex items-center justify-center"
+          >
+            <div class="text-center w-full">
+              <div
+                class="w-24 h-24 mx-auto bg-brand-neonBlue/10 rounded-full flex items-center justify-center mb-8 relative"
+              >
+                <div
+                  class="absolute inset-0 bg-brand-neonBlue/20 rounded-full animate-ping opacity-50"
+                ></div>
+                <i
+                  class="ri-whatsapp-fill text-5xl text-brand-neonBlue relative z-10"
+                ></i>
+              </div>
+              <h4 class="text-2xl font-bold text-white mb-3">
+                Konsultasi Promo
+              </h4>
+              <p class="text-slate-400 text-sm mb-10 max-w-sm mx-auto">
+                Kami akan membalas pesan Anda dalam hitungan menit untuk
+                membahas proyek reklame impian Anda.
+              </p>
+
+              <a
+                href="https://wa.me/62895375867162"
+                target="_blank"
+                class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-5 rounded-full bg-brand-neonBlue text-black font-bold text-lg hover:bg-white hover:shadow-[0_0_40px_rgba(0,240,255,0.7)] transition-all duration-300 gap-3 group relative overflow-hidden"
+              >
+                <i
+                  class="ri-chat-3-line text-xl group-hover:scale-110 transition-transform"
+                ></i>
+                <span class="relative z-10">Mulai Obrolan Sekarang</span>
+                <div
+                  class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-40 group-hover:animate-[shine_1.5s_infinite]"
+                ></div>
+              </a>
+              <p
+                class="text-xs text-slate-500 mt-6 flex justify-center items-center gap-1"
+              >
+                <i class="ri-shield-check-line text-brand-neonBlue"></i> Kami
+                menjamin kerahasiaan ide dan data Anda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-12 border-t border-white/5 relative z-10">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <div class="flex items-center gap-4">
+          <a href="#" class="cursor-pointer inline-block group">
+            <img
+              src="img/logo.jpg"
+              alt="AngkasaAdv Logo"
+              class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </a>
+          <span class="hidden md:inline-block w-px h-5 bg-white/10"></span>
+          <p class="text-slate-500 text-sm">© 2026 Hak Cipta Dilindungi.</p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-brand-neonBlue hover:bg-brand-neonBlue/10 transition-colors"
+          >
+            <i class="ri-instagram-line text-xl"></i>
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-brand-neonPink hover:bg-brand-neonPink/10 transition-colors"
+          >
+            <i class="ri-tiktok-fill text-xl"></i>
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-blue-500 hover:bg-blue-500/10 transition-colors"
+          >
+            <i class="ri-facebook-circle-fill text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Image Modal for Portfolio -->
+    <div
+      id="image-modal"
+      class="fixed inset-0 z-[100] bg-brand-dark/95 backdrop-blur-sm hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300"
+    >
+      <button
+        id="close-modal"
+        class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/5 border border-white/10 text-white flex items-center justify-center hover:bg-brand-neonPink hover:text-white hover:border-transparent transition-colors z-10 shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+      >
+        <i class="ri-close-line text-2xl"></i>
+      </button>
+      <div
+        class="max-w-5xl w-full flex items-center justify-center scale-95 transition-transform duration-300"
+        id="modal-content"
+      >
+        <img
+          id="modal-img"
+          src=""
+          alt="Portfolio Image Preview"
+          class="w-full max-h-[85vh] rounded-2xl shadow-[0_0_50px_rgba(0,0,0,1)] object-contain border border-white/10"
+        />
+      </div>
+    </div>
+
+    <!-- Floating WA Button (Responsive) -->
+    <a
+      href="https://wa.me/62895375867162"
+      target="_blank"
+      class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(37,211,102,0.5)] z-40 hover:scale-110 transition-transform cursor-pointer"
+      aria-label="Konsultasi WhatsApp"
+    >
+      <i class="ri-whatsapp-line pointer-events-none"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- Mobile Sidebar -->
+    <div
+      id="mobile-sidebar-overlay"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 opacity-0"
+    ></div>
+    <div
+      id="mobile-sidebar"
+      class="fixed inset-y-0 right-0 w-64 bg-brand-dark/95 backdrop-blur-xl border-l border-white/5 shadow-[0_0_40px_rgba(0,240,255,0.1)] transform translate-x-full transition-transform duration-300 ease-in-out z-[60]"
+    >
+      <div class="p-6 flex justify-end border-b border-white/5">
+        <button
+          id="close-sidebar-btn"
+          class="text-white hover:text-brand-neonPink transition-colors p-2 cursor-pointer"
+        >
+          <i class="ri-close-large-line text-2xl"></i>
+        </button>
+      </div>
+      <div class="flex flex-col p-6 space-y-6">
+        <a
+          href="#home"
+          class="mobile-nav-link text-gray-300 hover:text-brand-neonBlue transition-colors text-lg font-medium"
+          >Beranda</a
+        >
+        <a
+          href="#services"
+          class="mobile-nav-link text-gray-300 hover:text-brand-neonBlue transition-colors text-lg font-medium"
+          >Layanan</a
+        >
+        <a
+          href="#portfolio"
+          class="mobile-nav-link text-gray-300 hover:text-brand-neonBlue transition-colors text-lg font-medium"
+          >Portofolio</a
+        >
+        <a
+          href="https://wa.me/62895375867162"
+          target="_blank"
+          class="px-5 py-3 rounded-xl bg-brand-neonBlue/10 text-brand-neonBlue border border-brand-neonBlue/30 hover:bg-brand-neonBlue hover:text-black shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300 font-bold flex items-center justify-center gap-2 mt-4"
+        >
+          <i class="ri-whatsapp-line text-xl"></i>
+          Konsultasi
+        </a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

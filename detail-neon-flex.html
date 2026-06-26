@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk - AngkasaAdv</title>
+    <meta
+      name="description"
+      content="Spesifikasi lengkap layanan dan produk Angkasa Advertising."
+    />
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#030712",
+                card: "#0f172a",
+                neonBlue: "#00f0ff",
+                neonPink: "#ff003c",
+                neonCyan: "#0ff0fc",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Outfit", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body
+    class="bg-brand-dark text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-brand-neonBlue selection:text-black"
+  >
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+      <div
+        class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/5 shadow-lg"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center">
+            <a
+              href="index.html"
+              class="cursor-pointer relative z-50 inline-block group"
+            >
+              <img
+                src="img/logo.jpg"
+                alt="AngkasaAdv Logo"
+                class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </a>
+          </div>
+          <!-- Desktop Menu -->
+          <div
+            class="hidden md:flex space-x-8 items-center cursor-pointer relative z-50"
+          >
+            <a
+              href="index.html#home"
+              class="text-gray-300 hover:text-brand-neonBlue transition-colors duration-200 text-sm font-medium"
+              >Beranda</a
+            >
+            <a
+              href="index.html#services"
+              class="text-brand-neonBlue transition-colors duration-200 text-sm font-medium"
+              >Layanan</a
+            >
+            <a
+              href="index.html#portfolio"
+              class="text-gray-300 hover:text-brand-neonBlue transition-colors duration-200 text-sm font-medium"
+              >Portofolio</a
+            >
+            <a
+              href="index.html#contact"
+              class="px-5 py-2.5 rounded-full bg-brand-neonBlue/10 text-brand-neonBlue border border-brand-neonBlue/30 hover:bg-brand-neonBlue hover:text-black hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300 text-sm font-semibold flex items-center gap-2 group"
+            >
+              <i
+                class="ri-whatsapp-line text-lg group-hover:scale-110 transition-transform"
+              ></i>
+              Konsultasi
+            </a>
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center relative z-50">
+            <button
+              id="mobile-menu-btn"
+              class="text-white hover:text-brand-neonBlue transition-colors p-2 cursor-pointer"
+            >
+              <i class="ri-menu-4-line text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content Margin Top -->
+    <main class="pt-32 pb-24 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Breadcrumb -->
+        <nav
+          class="flex text-xs font-semibold uppercase tracking-wider text-slate-500 mb-8"
+          aria-label="Breadcrumb"
+        >
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a
+                href="index.html"
+                class="hover:text-brand-neonBlue transition-colors"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <div class="flex items-center">
+                <i class="ri-arrow-right-s-line px-1"></i>
+                <a
+                  href="index.html#services"
+                  class="hover:text-brand-neonBlue transition-colors"
+                  >Layanan Unggulan</a
+                >
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <i class="ri-arrow-right-s-line px-1"></i>
+                <span class="text-white">Custom Neon Flex Art</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+
+        <!-- Product Hero Block -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+          <!-- Product Gallery (Left) -->
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div
+              class="relative w-full aspect-square rounded-2xl bg-brand-card border border-white/5 overflow-hidden group"
+            >
+              <!-- Main Image -->
+              <img
+                id="main-product-img"
+                src="img/portfolio-neon-flex.png"
+                alt="Custom Neon Flex Art"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <!-- Glass Badge -->
+              <div
+                class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-xs font-bold text-white tracking-wider"
+              >
+                PRODUK TERLARIS
+              </div>
+            </div>
+
+            <!-- Thumbnails List -->
+            <div class="grid grid-cols-3 gap-4" id="thumbnail-gallery">
+              <div
+                class="aspect-square rounded-lg bg-brand-card overflow-hidden border border-brand-neonBlue cursor-pointer hover:border-brand-neonBlue transition-colors"
+              >
+                <img
+                  src="img/portfolio-neon-flex.png"
+                  class="w-full h-full object-cover opacity-100"
+                  alt="Thumbnail 1"
+                />
+              </div>
+              <div
+                class="aspect-square rounded-lg bg-brand-card overflow-hidden border border-white/5 cursor-pointer hover:border-brand-neonBlue transition-colors"
+              >
+                <img
+                  src="img/neon-flex-ai.png"
+                  class="w-full h-full object-cover opacity-70 hover:opacity-100"
+                  alt="Thumbnail 2"
+                />
+              </div>
+              <div
+                class="aspect-square rounded-lg bg-brand-card overflow-hidden border border-white/5 cursor-pointer hover:border-brand-neonBlue transition-colors"
+              >
+                <img
+                  src="img/neon-flex-ai2.jpeg"
+                  class="w-full h-full object-cover opacity-70 hover:opacity-100"
+                  alt="Thumbnail 3"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Product Details (Right) -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            <div class="mb-4">
+              <h1
+                class="text-3xl md:text-5xl font-heading font-black text-white mb-2 leading-tight"
+              >
+                Custom Neon Flex Art
+              </h1>
+              <div class="flex items-center gap-4 flex-wrap">
+                <span
+                  class="text-xl md:text-2xl font-bold font-mono text-brand-neonBlue border-b border-brand-neonBlue/30 pb-1"
+                  >Harga by RAB Project</span
+                >
+                <span
+                  class="bg-red-500/20 text-red-400 border border-red-500/30 font-bold text-xs px-3 py-1 rounded-sm uppercase tracking-wider"
+                  >TERSEDIA</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-6 mb-8 text-sm font-medium text-slate-400"
+            >
+              <span class="flex items-center gap-2"
+                ><i class="ri-truck-line text-lg text-brand-neonBlue"></i>
+                Instalasi Jabodetabek</span
+              >
+              <span class="flex items-center gap-2"
+                ><i
+                  class="ri-shield-check-line text-lg text-brand-neonBlue"
+                ></i>
+                Garansi Lampu 1 Th</span
+              >
+            </div>
+
+            <div class="bg-white/5 border border-white/5 rounded-xl p-6 mb-8">
+              <dl class="space-y-4 text-sm">
+                <div
+                  class="grid grid-cols-3 md:grid-cols-4 gap-4 pb-4 border-b border-white/5"
+                >
+                  <dt class="font-bold text-white uppercase tracking-wider">
+                    Tipe Visual
+                  </dt>
+                  <dd class="col-span-2 md:col-span-3 text-slate-300">
+                    Akrilik Susu / Backlite Jerman
+                  </dd>
+                </div>
+                <div
+                  class="grid grid-cols-3 md:grid-cols-4 gap-4 pb-4 border-b border-white/5"
+                >
+                  <dt class="font-bold text-white uppercase tracking-wider">
+                    Rangka
+                  </dt>
+                  <dd class="col-span-2 md:col-span-3 text-slate-300">
+                    Besi Hollow Galvanis (Anti Karat) / Plat Aluminium
+                  </dd>
+                </div>
+                <div class="grid grid-cols-3 md:grid-cols-4 gap-4">
+                  <dt class="font-bold text-white uppercase tracking-wider">
+                    Pencahayaan
+                  </dt>
+                  <dd class="col-span-2 md:col-span-3 text-slate-300">
+                    Modul LED IP67 Waterproof + Trafo Rainproof
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+              <a
+                href="https://wa.me/62895375867162"
+                target="_blank"
+                class="flex-1 flex items-center justify-center gap-3 bg-brand-neonBlue hover:bg-white text-black py-4 px-6 font-bold uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(0,240,255,0.2)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] group"
+              >
+                <i
+                  class="ri-whatsapp-fill text-2xl group-hover:scale-110 transition-transform"
+                ></i>
+                Konsultasikan Dimensi
+              </a>
+              <button
+                class="w-full sm:w-16 h-14 sm:h-auto border border-white/20 text-slate-300 hover:text-white hover:border-white transition-all flex items-center justify-center flex-shrink-0 group bg-brand-card"
+              >
+                <i
+                  class="ri-heart-3-line text-xl group-hover:text-brand-neonPink transition-colors"
+                ></i>
+              </button>
+            </div>
+
+            <!-- Review Card Template -->
+            <div
+              class="bg-gradient-to-r from-brand-card to-[#0d1430] border-l-4 border-brand-neonBlue p-5 rounded-r-xl"
+            >
+              <h4
+                class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3"
+              >
+                Kata Klien Kami
+              </h4>
+              <div class="flex text-yellow-400 text-sm mb-2">
+                <i class="ri-star-fill"></i><i class="ri-star-fill"></i
+                ><i class="ri-star-fill"></i><i class="ri-star-fill"></i
+                ><i class="ri-star-fill"></i>
+              </div>
+              <p class="text-slate-300 text-sm font-serif italic mb-3">
+                "Pengerjaannya cepat dan rangka besinya sangat tebal beda dari
+                tempat lain. Lampunya nyala rata menyiasati logo detail
+                perusahaan kami. Mantap teknisi ramah."
+              </p>
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-6 h-6 rounded-full bg-brand-neonBlue/20 flex flex-shrink-0 items-center justify-center text-xs text-brand-neonBlue"
+                >
+                  <i class="ri-user-line"></i>
+                </div>
+                <span class="text-xs font-bold text-slate-400"
+                  >— Project Manager PT Bina Mitra</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Long Description -->
+        <div class="mt-24 pt-16 border-t border-white/5">
+          <div class="mb-10 text-center">
+            <h2
+              class="text-2xl md:text-3xl font-heading font-bold text-white inline-block relative"
+            >
+              Deskripsi Material & Instalasi
+              <span
+                class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-1 bg-brand-neonBlue"
+              ></span>
+            </h2>
+          </div>
+
+          <div
+            class="max-w-4xl mx-auto text-slate-400 space-y-6 text-sm md:text-base leading-relaxed text-center font-light"
+          >
+            <p>
+              <strong>Custom Neon Flex Art</strong> adalah investasi visual
+              standar korporat kami. Dikonstruksi agar tidak hanya memancarkan
+              cahaya logo di malam hari, tetapi juga mempertahankan bentuk dan
+              citra elit pada sinar matahari langsung.
+            </p>
+            <p>
+              Material cover panel yang kami sediakan meliputi
+              <em>Backlite Korea ketebalan 510gr</em> yang anti pecah atau
+              <em>Acrylic murni tebal 3mm</em>. Untuk pilar penerangan utama,
+              kami menggunakan LED Modul dari pabrikan dengan spesifikasi IP67
+              (Total Waterproof) sehingga meminimalisir risiko korsleting akibat
+              paparan air hujan ekstrem.
+            </p>
+            <p>
+              Cocok untuk diaplikasikan di fasad ruko, menara gedung, apotek
+              besar, minimarket, tiang totem jalan arteri, atau area interior
+              lobi perkantoran. Rangka interior kami pastikan ditambahkan
+              tulangan agar saat diterpa angin kencang (outdoor), visual box
+              tidak melengkung ke dalam maupun bergoyang.
+            </p>
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="mt-24 pt-16 border-t border-white/5 relative">
+          <h3
+            class="text-xl md:text-2xl font-heading font-bold text-white mb-8"
+          >
+            Produk Terkait
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <!-- Item 1 -->
+            <a href="#" class="group block">
+              <div
+                class="aspect-square bg-brand-card overflow-hidden rounded-xl border border-white/5 mb-4 relative"
+              >
+                <img
+                  src="img/portfolio-huruf-timbul.png"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt="Huruf Timbul LED"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-brand-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 text-brand-neonBlue border border-brand-neonBlue px-4 py-1 text-xs font-bold rounded-full bg-brand-card/80 backdrop-blur-sm whitespace-nowrap"
+                >
+                  LIHAT PRODUK
+                </div>
+              </div>
+              <h5
+                class="text-white font-bold mb-1 group-hover:text-brand-neonBlue transition-colors font-heading truncate"
+              >
+                Huruf Timbul LED 3D
+              </h5>
+              <p class="text-slate-500 text-sm font-mono tracking-wide">
+                Custom RAB
+              </p>
+            </a>
+
+            <!-- Item 2 -->
+            <a href="#" class="group block">
+              <div
+                class="aspect-square bg-brand-card overflow-hidden rounded-xl border border-white/5 mb-4 relative"
+              >
+                <img
+                  src="img/portfolio-neon-flex.png"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt="Neon Flex"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-brand-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 text-brand-neonPink border border-brand-neonPink px-4 py-1 text-xs font-bold rounded-full bg-brand-card/80 backdrop-blur-sm whitespace-nowrap"
+                >
+                  LIHAT PRODUK
+                </div>
+              </div>
+              <h5
+                class="text-white font-bold mb-1 group-hover:text-brand-neonPink transition-colors font-heading truncate"
+              >
+                Custom Neon Flex Art
+              </h5>
+              <p class="text-slate-500 text-sm font-mono tracking-wide">
+                Custom RAB
+              </p>
+            </a>
+
+            <!-- Item 3 -->
+            <a href="#" class="group block">
+              <div
+                class="aspect-square bg-brand-card overflow-hidden rounded-xl border border-white/5 mb-4 relative"
+              >
+                <img
+                  src="img/portfolio-signboard.png"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt="Signboard"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-brand-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 text-white border border-white px-4 py-1 text-xs font-bold rounded-full bg-brand-card/80 backdrop-blur-sm whitespace-nowrap"
+                >
+                  LIHAT PRODUK
+                </div>
+              </div>
+              <h5
+                class="text-white font-bold mb-1 transition-colors font-heading truncate"
+              >
+                Signboard Eksterior
+              </h5>
+              <p class="text-slate-500 text-sm font-mono tracking-wide">
+                Custom RAB
+              </p>
+            </a>
+
+            <!-- Item 4 -->
+            <a href="#" class="group block">
+              <div
+                class="aspect-square bg-brand-card overflow-hidden rounded-xl border border-white/5 mb-4 relative"
+              >
+                <img
+                  src="img/portfolio-branding-ruko.png"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt="Fasad"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-brand-card to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 text-brand-neonBlue border border-brand-neonBlue px-4 py-1 text-xs font-bold rounded-full bg-brand-card/80 backdrop-blur-sm whitespace-nowrap"
+                >
+                  LIHAT KARYA
+                </div>
+              </div>
+              <h5
+                class="text-white font-bold mb-1 group-hover:text-brand-neonBlue transition-colors font-heading truncate"
+              >
+                Fasad Arsitektural Ekstrem
+              </h5>
+              <p class="text-slate-500 text-sm font-mono tracking-wide">
+                Project Besar
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-brand-dark py-12 border-t border-white/5 relative z-10 w-full mt-auto"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="cursor-pointer inline-block group">
+            <img
+              src="img/logo.jpg"
+              alt="AngkasaAdv Logo"
+              class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </a>
+          <span class="hidden md:inline-block w-px h-5 bg-white/10"></span>
+          <p class="text-slate-500 text-sm">© 2026 Hak Cipta Dilindungi.</p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-brand-neonBlue hover:bg-brand-neonBlue/10 transition-colors"
+          >
+            <i class="ri-instagram-line text-xl"></i>
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-brand-neonPink hover:bg-brand-neonPink/10 transition-colors"
+          >
+            <i class="ri-tiktok-fill text-xl"></i>
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:text-blue-500 hover:bg-blue-500/10 transition-colors"
+          >
+            <i class="ri-facebook-circle-fill text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WA Button (Responsive) -->
+    <a
+      href="https://wa.me/62895375867162"
+      target="_blank"
+      class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(37,211,102,0.5)] z-40 hover:scale-110 transition-transform cursor-pointer"
+      aria-label="Konsultasi WhatsApp"
+    >
+      <i class="ri-whatsapp-line pointer-events-none"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- Mobile Sidebar -->
+    <div
+      id="mobile-sidebar-overlay"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 opacity-0"
+    ></div>
+    <div
+      id="mobile-sidebar"
+      class="fixed inset-y-0 right-0 w-64 bg-brand-dark/95 backdrop-blur-xl border-l border-white/5 shadow-[0_0_40px_rgba(0,240,255,0.1)] transform translate-x-full transition-transform duration-300 ease-in-out z-[60]"
+    >
+      <div class="p-6 flex justify-end border-b border-white/5">
+        <button
+          id="close-sidebar-btn"
+          class="text-white hover:text-brand-neonPink transition-colors p-2 cursor-pointer"
+        >
+          <i class="ri-close-large-line text-2xl"></i>
+        </button>
+      </div>
+      <div class="flex flex-col p-6 space-y-6">
+        <a
+          href="index.html#home"
+          class="mobile-nav-link text-gray-300 hover:text-brand-neonBlue transition-colors text-lg font-medium"
+          >Beranda</a
+        >
+        <a
+          href="index.html#services"
+          class="mobile-nav-link text-gray-300 hover:text-brand-neonBlue transition-colors text-lg font-medium"
+          >Layanan</a
+        >
+        <a
+          href="index.html#portfolio"
+          class="mobile-nav-link text-gray-300 hover:text-brand-neonBlue transition-colors text-lg font-medium"
+          >Portofolio</a
+        >
+        <a
+          href="https://wa.me/62895375867162"
+          target="_blank"
+          class="px-5 py-3 rounded-xl bg-brand-neonBlue/10 text-brand-neonBlue border border-brand-neonBlue/30 hover:bg-brand-neonBlue hover:text-black shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300 font-bold flex items-center justify-center gap-2 mt-4"
+        >
+          <i class="ri-whatsapp-line text-xl"></i>
+          Konsultasi
+        </a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
