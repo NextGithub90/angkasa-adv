@@ -192,97 +192,60 @@ document.addEventListener("DOMContentLoaded", () => {
   const testimonialsData = [
     {
       quote:
-        "Pemasangan ACP dan Neon Box sangat rapi. Tim AngkasaAdv benar-benar mengerti standar kualitas untuk perusahaan skala nasional. Fasad gedung kami kini jauh lebih megah.",
+        "Pemasangan ACP sama Neon Box-nya gila jos banget, rapi pol! Tim AngkasaAdv emang paham banget standar buat perusahaan gede. Fasad gedung kita sekarang kelihatan mewah abis, mantap!",
       name: "Budi Santoso",
       designation: "PT Global Industries",
-      src: "https://images.unsplash.com/photo-1557053910-d9eadeed1c58?q=80&w=1887&auto=format&fit=crop",
+      src: "img/neon-box-4.jpeg",
     },
     {
       quote:
-        "Neon fleksibel custom yang dipesan pengerjaannya sangat cepat dan warnanya stunning! Benar-benar menjadi daya tarik utama untuk spot foto pelanggan kami.",
+        "Pesen custom neon flex di sini cepet banget jadinya, dan warnanya asli stunning! Beneran langsung jadi spot foto favorit pelanggan di cafe kita. Keren parah!",
       name: "Anita Wijaya",
       designation: "Owner Cafe Senada",
-      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop",
+      src: "img/neon-flex-ai2.jpeg",
     },
     {
       quote:
-        "Struktur Huruf Timbul LED di atas gedung sangat solid menahan angin berkat konstruksi besi berkualitas tinggi. Pengerjaan di lapangan memastikan K3 dipatuhi.",
+        "Huruf Timbul LED di atas gedung bener-bener solid! Konstruksi besinya kuat nahan angin kenceng. Anak-anak lapangan kerjanya juga rapi dan safety. Jos gandos deh pokoknya!",
       name: "Risman Hakim",
       designation: "Direktur Teknis",
-      src: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=2070&auto=format&fit=crop",
+      src: "img/huruf-timbul2.png.jpeg",
     },
     {
       quote:
-        "Saya terkesan oleh desain 3D yang sangat akurat sebelum eksekusi dimulai. Hasil akhir Signboard kami persis seperti apa yang dijanjikan, bahkan lebih elegan.",
+        "Sumpah terkesan banget sama desain 3D-nya yang akurat pol dari awal. Pas Signboard-nya udah beres, hasilnya persis kaya ekspektasi, malah kelihatan lebih elegan. Mantul!",
       name: "Rina Maharani",
       designation: "Manager Marketing NexusWorks",
-      src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop",
+      src: "img/neon-box-3.jpeg",
     },
   ];
 
-  const imageStack = document.getElementById("testi-image-stack");
   const nameEl = document.getElementById("testi-name");
   const desigEl = document.getElementById("testi-designation");
   const quoteEl = document.getElementById("testi-quote");
   const nextBtn = document.getElementById("testi-next-btn");
   const prevBtn = document.getElementById("testi-prev-btn");
 
-  if (imageStack && testimonialsData.length > 0) {
+  if (nameEl && quoteEl && testimonialsData.length > 0) {
     let activeTesti = 0;
-    const cards = [];
-
-    // Initialize images
-    testimonialsData.forEach((t, i) => {
-      const card = document.createElement("div");
-      card.className =
-        "absolute inset-0 origin-bottom rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 ease-in-out border border-white/10";
-      const img = document.createElement("img");
-      img.src = t.src;
-      img.alt = t.name;
-      img.className = "h-full w-full object-cover";
-      img.onerror = () => {
-        img.src = `https://placehold.co/500x500/1e293b/00f0ff?text=${t.name.charAt(0)}`;
-      };
-      card.appendChild(img);
-      imageStack.appendChild(card);
-      cards.push(card);
-    });
 
     const updateTestimonials = () => {
-      cards.forEach((card, i) => {
-        const diff = i - activeTesti;
-        const absDiff = Math.abs(diff);
-
-        let rotation = Math.floor(Math.random() * 16) - 8;
-        if (i === activeTesti) rotation = 0;
-        else if (i < activeTesti) rotation = -10 - absDiff * 4;
-        else rotation = 10 + absDiff * 4;
-
-        const len = testimonialsData.length;
-
-        if (i === activeTesti) {
-          card.style.opacity = "1";
-          card.style.transform = `scale(1) translateY(0) rotate(0deg)`;
-          card.style.zIndex = len;
-        } else {
-          card.style.opacity = "0.3";
-          card.style.transform = `scale(0.9) translateY(20px) rotate(${rotation}deg)`;
-          card.style.zIndex = len - absDiff;
-        }
-      });
-
       // Animate Text
       const textContainer = document.getElementById("testi-text-container");
-      textContainer.style.opacity = "0";
-      textContainer.style.transform = "translateY(20px)";
+      if (textContainer) {
+        textContainer.style.opacity = "0";
+        textContainer.style.transform = "translateY(15px) scale(0.98)";
+      }
 
       setTimeout(() => {
         nameEl.textContent = testimonialsData[activeTesti].name;
         desigEl.textContent = testimonialsData[activeTesti].designation;
         quoteEl.textContent = '"' + testimonialsData[activeTesti].quote + '"';
 
-        textContainer.style.opacity = "1";
-        textContainer.style.transform = "translateY(0)";
+        if (textContainer) {
+          textContainer.style.opacity = "1";
+          textContainer.style.transform = "translateY(0) scale(1)";
+        }
       }, 300);
     };
 
@@ -291,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let autoPlayInterval = setInterval(() => {
       activeTesti = (activeTesti + 1) % testimonialsData.length;
       updateTestimonials();
-    }, 5000);
+    }, 6000);
 
     const manualUpdate = (newIndex) => {
       clearInterval(autoPlayInterval);
@@ -300,18 +263,22 @@ document.addEventListener("DOMContentLoaded", () => {
       autoPlayInterval = setInterval(() => {
         activeTesti = (activeTesti + 1) % testimonialsData.length;
         updateTestimonials();
-      }, 5000);
+      }, 6000);
     };
 
-    nextBtn.addEventListener("click", () => {
-      manualUpdate((activeTesti + 1) % testimonialsData.length);
-    });
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        manualUpdate((activeTesti + 1) % testimonialsData.length);
+      });
+    }
 
-    prevBtn.addEventListener("click", () => {
-      manualUpdate(
-        (activeTesti - 1 + testimonialsData.length) % testimonialsData.length,
-      );
-    });
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        manualUpdate(
+          (activeTesti - 1 + testimonialsData.length) % testimonialsData.length,
+        );
+      });
+    }
   }
 
   // 8. Product Gallery Interactive Swap
